@@ -12,10 +12,13 @@ function Nav() {
   return(
             <nav>
            <div className="navContainer">
+            <h1 className="logoText">Stop Jockin</h1>
+            <div className="navLinks">
            <Link to='/Barbershop' >Barbershop</Link>
            <Link to='/SnoBalls' >SnoBalls</Link>
            <Link to='/Lot-7' >Lot7</Link>
            <Link to='/Products' >Products</Link>
+           </div>
            </div>
             </nav>
         )

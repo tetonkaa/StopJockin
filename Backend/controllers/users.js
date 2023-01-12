@@ -65,19 +65,7 @@ router.delete('/', async (req, res) => {
 
 
 
-// User comment
 
-router.put('/profile-comment', async (req, res) => {
-  const token = req.headers.authorization
-  const decode = jwt.decode(token, config.jwtSecret)
-  const updatedUser = await db.User.findByIdAndUpdate(
-    decode.id,
-    { $push: { comments: req.body} },
-    { new: true } 
-    )
-    res.json(updatedUser)
-
-})
 
 
 

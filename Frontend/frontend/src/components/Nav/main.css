@@ -1,5 +1,34 @@
 .navContainer{
-    height: 20vw;
+    height: 7vw;
     width: 100%;
-    background-color: green;
+    background-color: rgb(20, 20, 20,);
+    margin:auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15vw; 
+    
 }
+
+.logoText{
+    font-family: 'Moon Dance', cursive;
+    font-size: 3vw;
+    margin-left: .6vw;
+    color: rgb(230, 247, 1);
+}
+
+.navLinks{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3vw;
+    gap: 15vw;
+    color: rgb(230, 247, 1);
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: rgb(230, 247, 1);
+  }
+
+  a:visited {
+    text-decoration: none;
+  }

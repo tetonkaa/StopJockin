@@ -3,7 +3,7 @@ const router = express.Router()
 const db = require('../models')
 const jwt = require('jwt-simple')
 const config = require('../config/config')
-const Product = require('../models/product')
+const Product = require('../models/product.js')
 
 function isAuthenticated(req, res, next) {
     if (req.headers.authorization) {
@@ -20,6 +20,14 @@ router.post('/', isAuthenticated, async (req, res) => {
     createdProduct.user = decoded.id
     createdProduct.save()
     res.json(createdProduct)
+})
+
+//delete route
+router.delete('/:id', (req, res) => {
+
+    db.Product.findByIdAndRemove(req.params.id, (err, foundProduct) => {
+        res.redirect('/products')
+    })
 })
 
 // index route
