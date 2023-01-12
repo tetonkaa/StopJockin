@@ -1,0 +1,10 @@
+.productsText{
+    color:goldenrod;
+    text-align: center;
+}
+
+.productsContainer{
+    height: 100vh;
+    width:100%;
+    background-color:black;
+}

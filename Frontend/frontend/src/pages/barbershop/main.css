@@ -1,0 +1,10 @@
+.barberText{
+    color:goldenrod;
+    text-align: center;
+}
+
+.barberContainer{
+    height: 100vh;
+    width:100%;
+    background-color:black;
+}
