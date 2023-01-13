@@ -10,6 +10,7 @@ import Barbershop from "./pages/barbershop";
 import Lot7 from "./pages/lot-7";
 import Products from "./pages/products";
 import SnoBall from "./pages/snoBall"
+import Footer from './components/Footer'
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -43,12 +44,13 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home/>}></Route>
-        <Route path="/barbershop" element={<Barbershop/>}></Route>
-        <Route path="/Lot-7" element={<Lot7/>}></Route>
-        <Route path="/Products" element={<Products/>}></Route>
-        <Route path="SnoBalls" element={<SnoBall />}></Route>
+        <Route path="/barbershop" element={<Barbershop setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} user={user}/>}></Route>
+        <Route path="/Lot-7" element={<Lot7 setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} user={user}/>}></Route>
+        <Route path="/Products" element={<Products setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} user={user}/>}></Route>
+        <Route path="SnoBalls" element={<SnoBall setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} user={user} />}></Route>
+        <Route path="signup" element={<SignUp setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} user={user}/>}></Route>
       </Routes>
-      
+      <Footer />
     </main>
   );
 }

@@ -1,6 +1,11 @@
 .barberText{
     color:goldenrod;
     text-align: center;
+    font-family: 'Mandali', sans-serif;
+    font-size: 48px;
+    padding: 10vw 25vw;
+    border: solid;
+    margin-left: 25vw;
 }
 
 .barberContainer{

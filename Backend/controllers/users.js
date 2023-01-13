@@ -11,21 +11,23 @@ const User = require('../models/user')
 
 //routes
 
-router.post('/signup', async (req, res) => {
-  const foundUser = await db.User.findOne({ username: req.body.username})
-  console.log(foundUser)
-  if(!foundUser){
-      const createdUser = await db.User.create(req.body)
-      const payload = {id: createdUser._id}
-      const token = jwt.encode(payload, config.jwtSecret)
-      res.json({
-          user: createdUser,
-          token: token
-      })
-  } else {
-      res.sendStatus(401)
-  }
-})
+router.post('/signup', async (req, res) =>{ 
+    const foundUser = await db.User.findOne({ username: req.body.username})
+    console.log(foundUser)
+    if(!foundUser){
+        const createdUser = await db.User.create(req.body)
+        const payload = {id: createdUser._id}
+        const token = jwt.encode(payload, config.jwtSecret)
+        const { signupCode } = req.body;
+        if(signupCode === 'sup3rs3cr3t'){
+        res.json({
+            user: createdUser,
+            token: token
+        })
+    } else {
+        res.sendStatus(401)
+    }
+  }})
 
 router.post('/login', async (req, res) => {
     const foundUser = await User.findOne({ username: req.body.username })

@@ -11,7 +11,7 @@ export default function Barbershop() {
     return (
         
         <div className="barberContainer">
-            <p className="barberText"> THIS WILL BE THE BARBERSHOP TEXT/ REMEMBER TO ADD IMAGES AND IMAGE CAROUSEL </p>
+            <p className="barberText"> THIS WILL BE THE BARBERSHOP TEXT/ AREA TO ADD IMAGES AND IMAGE CAROUSEL </p>
         </div>
         
     )

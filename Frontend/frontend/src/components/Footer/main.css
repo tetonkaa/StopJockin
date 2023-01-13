@@ -1,0 +1,14 @@
+.footerContainer{
+    height: -7vw;
+    width: 100%;
+    background-color: rgb(20, 20, 20,);
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    gap: 15vw;
+    text-align: center;
+}
+
+.footerContainer a{
+    color: white;
+}

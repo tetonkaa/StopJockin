@@ -5,8 +5,16 @@ const userSchema = new mongoose.Schema(
 	{
 	username: { type: String, required: true },
 	password: { type: String, required: true },
-	twitchLink: {type: String},
-	favGameId: { type: String }
+    signupCode: {
+        type: String,
+        required: true,
+        validate: {
+          validator: function(value) {
+            return value === 'sup3rs3cr3t'
+          },
+          message: 'Invalid Signup Code'
+        }
+      },	
 	}
 )
 

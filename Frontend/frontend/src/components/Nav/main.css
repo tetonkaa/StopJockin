@@ -12,8 +12,8 @@
 .logoText{
     font-family: 'Moon Dance', cursive;
     font-size: 3vw;
-    margin-left: .6vw;
-    color: rgb(230, 247, 1);
+    margin-left: 1.5vw;
+    color: goldenrod;
 }
 
 .navLinks{
@@ -21,12 +21,14 @@
     justify-content: flex-end;
     margin-top: 3vw;
     gap: 15vw;
-    color: rgb(230, 247, 1);
+    color: goldenrod;
 }
 
 a:link, a:visited {
     text-decoration: none;
-    color: rgb(230, 247, 1);
+    font-family: 'Mandali', sans-serif;
+    color: goldenrod;
+    font-size: 1vw;
   }
 
   a:visited {
