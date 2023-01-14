@@ -47,8 +47,8 @@ function App() {
         <Route path="/barbershop" element={<Barbershop setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} user={user}/>}></Route>
         <Route path="/Lot-7" element={<Lot7 setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} user={user}/>}></Route>
         <Route path="/Products" element={<Products setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} user={user}/>}></Route>
-        <Route path="SnoBalls" element={<SnoBall setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} user={user} />}></Route>
-        <Route path="signup" element={<SignUp setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} user={user}/>}></Route>
+        <Route path="/SnoBalls" element={<SnoBall setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} user={user} />}></Route>
+        <Route path="/signup" element={<SignUp setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} user={user}/>}></Route>
       </Routes>
       <Footer />
     </main>

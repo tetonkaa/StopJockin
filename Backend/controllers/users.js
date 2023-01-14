@@ -25,7 +25,7 @@ router.post('/signup', async (req, res) =>{
             token: token
         })
     } else {
-        res.sendStatus(401)
+        res.Status(401).send({message: 'Invalid Signup Code'});
     }
   }})
 

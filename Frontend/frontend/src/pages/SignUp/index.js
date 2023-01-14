@@ -10,6 +10,7 @@ export default function SignUp({setIsLoggedIn, isLoggedIn}) {
     const [formState, setFormState] = useState({
         username: '',
         password: '',
+        signupCode: '',
         })
 
     // update the input value as a user types
@@ -28,7 +29,7 @@ export default function SignUp({setIsLoggedIn, isLoggedIn}) {
     
     useEffect(() => {
         if (isLoggedIn) {
-            return <Navigate to ="/"></Navigate>
+            return <Navigate to ="/barbershop"></Navigate>
         }
     }, [isLoggedIn])
 
@@ -37,9 +38,11 @@ export default function SignUp({setIsLoggedIn, isLoggedIn}) {
             <h2 >Sign Up</h2>
 
             <form onSubmit={submitHandler}>
-                <div>
+                <div className="input-texts">
                     <label htmlFor='username'>Username</label>
+                    <br/>
                     <input
+                        size="45"
                         type='text'
                         name='username'
                         onChange={handleChange}
@@ -48,7 +51,9 @@ export default function SignUp({setIsLoggedIn, isLoggedIn}) {
 
                 <div className="input-texts">
                     <label htmlFor='password'>Password</label>
+                    <br/>
                     <input
+                        size="45"
                         type='password'
                         name='password'
                         onChange={handleChange}
@@ -59,6 +64,7 @@ export default function SignUp({setIsLoggedIn, isLoggedIn}) {
                     <label htmlFor='signupCode'>Sign up Key</label>
                     <br />
                     <input
+                        size="45"
                         type='text'
                         name='signupCode'
                         onChange={handleChange}

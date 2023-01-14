@@ -24,3 +24,4 @@ mongoose.connection.on('error', (error) => {
 
 //access models
 module.exports.User = require('./user')
+module.exports.Product = require('./product')
