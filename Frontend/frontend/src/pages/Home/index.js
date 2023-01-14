@@ -28,33 +28,35 @@ const data = [
 
 export default function Home() {
         const [index, setIndex] = useState(0);
-        const handleSelect = (selectedIndex, e) => {
+        const handleSelect = (selectedIndex, i) => {
           setIndex(selectedIndex);
         };
       
         return (
               <div className="homeContainer">
-            <Carousel activeIndex={index} onSelect={handleSelect}>
+            <Carousel fade activeIndex={index} onSelect={handleSelect}>
              {data.map((slide, i) => {
               return (
                 <Carousel.Item>
-                    <div>       
               <img
-                className="d-block w-100 kar1"
+                className="d-block w-100"
                 src={slide.image}
                 alt="slider image"
-              />
-            <p className="homeText"> Welcome to Stop Jockin home of fine cuts , classic New Orleans style snoBalls, and other Stop Jockin services and products. </p>
+                />
               <Carousel.Caption>
                 <h3>{slide.caption}</h3>
                 <p>{slide.description}</p>
               </Carousel.Caption>
-            </div>
             </Carousel.Item>
               )
             })}
             
           </Carousel>
+                <div>       
+            <p className="homeText"> 
+            <h1 className="largeLogo">Stop Jockin</h1> 
+            Fine Cuts classic New Orleans style snoBalls, and other Stop Jockin services and products. </p>
+            </div>
           </div>
         );
       }
