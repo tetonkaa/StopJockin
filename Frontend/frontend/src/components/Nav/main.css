@@ -13,7 +13,6 @@
     font-family: 'Moon Dance', cursive;
     font-size: 3vw;
     margin-left: 3.5vw;
-    color: goldenrod;
     margin-top: 2vw;
 }
 
@@ -32,6 +31,34 @@ a:link, a:visited {
     font-size: 1vw;
   }
 
+  a:hover{
+    color: goldenrod;
+  }
   a:visited {
     text-decoration: none;
   }
+
+  .navIcons{
+    height: 2vw;
+    margin-left: .5vw;
+    
+}
+
+
+.navIcons.clipper:hover{
+    filter: invert(56%) sepia(81%) saturate(432%) hue-rotate(5deg) brightness(101%) contrast(91%)
+}
+
+.iceCream{
+    animation-name: icecreamAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes icecreamAnimation {
+    0%   {filter: grayscale(0%)}
+    50% {filter: grayscale(100)}
+    100%{filter: grayscale(0%)}
+}
+

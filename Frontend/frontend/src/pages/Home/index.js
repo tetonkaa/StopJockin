@@ -4,6 +4,10 @@ import './main.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap';
 import Carousel from 'react-bootstrap/Carousel'
+import anime from 'animejs/lib/anime.es.js';
+
+
+
 
 const data = [
     {
@@ -27,14 +31,11 @@ const data = [
 
 
 export default function Home() {
-        const [index, setIndex] = useState(0);
-        const handleSelect = (selectedIndex, i) => {
-          setIndex(selectedIndex);
-        };
-      
+        
+           
         return (
               <div className="homeContainer">
-            <Carousel fade activeIndex={index} onSelect={handleSelect}>
+            <Carousel fade controls={false} indicators={false}>
              {data.map((slide, i) => {
               return (
                 <Carousel.Item>
@@ -43,10 +44,7 @@ export default function Home() {
                 src={slide.image}
                 alt="slider image"
                 />
-              <Carousel.Caption>
-                <h3>{slide.caption}</h3>
-                <p>{slide.description}</p>
-              </Carousel.Caption>
+              
             </Carousel.Item>
               )
             })}
@@ -55,7 +53,8 @@ export default function Home() {
                 <div>       
             <p className="homeText"> 
             <h1 className="largeLogo">Stop Jockin</h1> 
-            Fine Cuts classic New Orleans style snoBalls, and other Stop Jockin services and products. </p>
+            Fine Cuts,<br/>
+            Classic New Orleans style snoBalls, <br/> and other Stop Jockin products and services </p>
             </div>
           </div>
         );
