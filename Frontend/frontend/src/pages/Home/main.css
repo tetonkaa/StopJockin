@@ -29,7 +29,9 @@
     margin-left: 2vw;
     margin-right: 2vw;
     z-index:1;
-
+    animation-name: pageLoadInFader;
+    animation-duration: 1.5s;
+    animation-play-state: running;
     
 } 
 

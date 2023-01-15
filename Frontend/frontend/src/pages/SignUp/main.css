@@ -1,6 +1,5 @@
 .SignUp{
-    border: solid rgb(83, 83, 83);
-    height: 55vh;
+    height: 75vh;
     width: 50%;
     color:white;
     margin: auto;
@@ -11,6 +10,15 @@
     background-color: rgba(255, 239, 19, 0.);
 }
 
+.signUpForm{
+    
+    height: 75%;
+    padding: 2vw;
+    border: solid rgb(83, 83, 83);
+    border-radius: 14px;
+    border-image: linear-gradient(45deg, goldenrod, rgb(250, 250, 250)) 1
+    
+}
 .input-texts{
     /* border: dotted red; */
     margin-left: -35%;
@@ -28,6 +36,7 @@
     border-right-style: hidden;
     border-left-style: hidden;
     border-bottom-style: hidden;
+    width: 20vw;
 }
 
 input[type=text]:focus{

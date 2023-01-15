@@ -12,6 +12,7 @@ function Footer() {
   return(
             <nav>
            <div className="footerContainer">
+            <Link to='/signup'>About</Link>
            <Link to='/signup'>Employee Portal</Link>
            </div>
             </nav>

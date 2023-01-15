@@ -14,7 +14,9 @@
     font-size: 3vw;
     margin-left: 3.5vw;
     margin-top: 2vw;
+    
 }
+
 
 .navLinks{
     display: flex;
@@ -24,15 +26,18 @@
     color: goldenrod;
 }
 
+
 a:link, a:visited {
     text-decoration: none;
     font-family: 'Mandali', sans-serif;
     color: goldenrod;
     font-size: 1vw;
+    transition: transform .4s;
   }
 
   a:hover{
-    color: goldenrod;
+    color: rgb(255, 255, 255) !important;
+    transform: scale(1.1);
   }
   a:visited {
     text-decoration: none;
@@ -51,7 +56,7 @@ a:link, a:visited {
 
 .iceCream{
     animation-name: icecreamAnimation;
-    animation-duration: 4s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
 }
 

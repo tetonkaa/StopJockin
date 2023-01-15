@@ -4,8 +4,10 @@
     background-color: rgb(20, 20, 20,);
     margin:auto;
     text-align: center;
+    
     }
 
 .footerContainer a{
     color: white;
+    padding-left: 2vw;
 }

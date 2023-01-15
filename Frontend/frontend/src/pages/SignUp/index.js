@@ -35,6 +35,7 @@ export default function SignUp({setIsLoggedIn, isLoggedIn}) {
 
     return (
         <div className="SignUp">
+            <div className="signUpForm">
             <h2 >Sign Up</h2>
 
             <form onSubmit={submitHandler}>
@@ -42,7 +43,6 @@ export default function SignUp({setIsLoggedIn, isLoggedIn}) {
                     <label htmlFor='username'>Username</label>
                     <br/>
                     <input
-                        size="45"
                         type='text'
                         name='username'
                         onChange={handleChange}
@@ -53,7 +53,7 @@ export default function SignUp({setIsLoggedIn, isLoggedIn}) {
                     <label htmlFor='password'>Password</label>
                     <br/>
                     <input
-                        size="45"
+                        
                         type='password'
                         name='password'
                         onChange={handleChange}
@@ -64,7 +64,6 @@ export default function SignUp({setIsLoggedIn, isLoggedIn}) {
                     <label htmlFor='signupCode'>Sign up Key</label>
                     <br />
                     <input
-                        size="45"
                         type='text'
                         name='signupCode'
                         onChange={handleChange}
@@ -72,6 +71,7 @@ export default function SignUp({setIsLoggedIn, isLoggedIn}) {
                 </div>
                 <button type='submit' class="buttons" >Sign Up</button>
             </form>
+            </div>
         </div>
     )
 }
