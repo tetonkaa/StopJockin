@@ -26,8 +26,8 @@ export default function Barbershop() {
                     <li>Hair Line Restoration (SMP)</li><aside>$30</aside>
                     
                 </ul>
-
             </div>
+                <p className="emailLink">Need a cut? <a  href="mailto: angel.l.ppuente@gmail.com">Hit us up </a></p>
         </div>
         
     )

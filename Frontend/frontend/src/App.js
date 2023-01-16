@@ -32,6 +32,7 @@ function App() {
     if (localStorage.token) {
         getUser()
         console.log('getUser has been run')
+        console.log(localStorage.token)
         setIsLoggedIn(true)
     }
   }, [localStorage.token])
@@ -43,14 +44,14 @@ function App() {
 
       <Nav />
       <Routes>
-        <Route path="/" element={<Home/>}></Route>
-        <Route path="/barbershop" element={<Barbershop setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} user={user}/>}></Route>
-        <Route path="/Lot-7" element={<Lot7 setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} user={user}/>}></Route>
-        <Route path="/Products" element={<Products setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} user={user}/>}></Route>
-        <Route path="/SnoBalls" element={<SnoBall setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} user={user} />}></Route>
+        <Route path="/" element={<Home setIsLoggedIn={setIsLoggedIn}/>}></Route>
+        <Route path="/barbershop" element={<Barbershop setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn}/>}></Route>
+        <Route path="/Lot-7" element={<Lot7 setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn}/>}></Route>
+        <Route path="/Products" element={<Products setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} />}></Route>
+        <Route path="/SnoBalls" element={<SnoBall setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn}/>}></Route>
         <Route path="/signup" element={<SignUp setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} user={user}/>}></Route>
       </Routes>
-      <Footer />
+      <Footer isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
     </main>
   );
 }

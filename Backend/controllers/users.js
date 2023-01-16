@@ -9,7 +9,19 @@ const User = require('../models/user')
 
 
 
+
 //routes
+
+//create post route for signup to include error handling if signup code is incorrect
+
+
+
+
+
+
+
+
+
 
 router.post('/signup', async (req, res) =>{ 
     const foundUser = await db.User.findOne({ username: req.body.username})
@@ -25,7 +37,7 @@ router.post('/signup', async (req, res) =>{
             token: token
         })
     } else {
-        res.Status(401).send({message: 'Invalid Signup Code'});
+        res.status(401).send({message: 'Invalid Signup Code'});
     }
   }})
 

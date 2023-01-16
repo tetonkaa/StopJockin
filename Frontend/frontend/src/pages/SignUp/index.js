@@ -25,11 +25,11 @@ export default function SignUp({setIsLoggedIn, isLoggedIn}) {
         setIsLoggedIn(true)
     }
 
-
+    const navigate = useNavigate()
     
     useEffect(() => {
         if (isLoggedIn) {
-            return <Navigate to ="/barbershop"></Navigate>
+            navigate('/')
         }
     }, [isLoggedIn])
 
@@ -75,3 +75,4 @@ export default function SignUp({setIsLoggedIn, isLoggedIn}) {
         </div>
     )
 }
+

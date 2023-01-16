@@ -10,7 +10,6 @@
 
 .barberContainer{
     height: 75vw;
-    width:100%;
     border: red solid;
     animation-name: pageLoadInFader;
     animation-duration: 1.5s;
@@ -20,7 +19,30 @@
 .menu{
     color: white;
     font-size: 4vh;
-    padding-left: 2vw;
+    padding-left: 55vw;
+    border: dotted pink;
+    
+}
+
+.menu ul{
+    list-style-image: url('https://i.imgur.com/ZSPDaYQ.png');
+    list-style-position: outside;
+    text-align: center;
+}
+
+aside{
+    color:green;
+}
+
+.emailLink{
+    text-align: center !important;
+    font-size: 4vh;
+    color: white;
+}
+
+.emailLink a{
+    font-size: 4vh;
+    color:goldenrod;
 }
 
 @keyframes pageLoadInFader {
