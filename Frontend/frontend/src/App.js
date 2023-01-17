@@ -49,7 +49,10 @@ function App() {
         <Route path="/Lot-7" element={<Lot7 setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn}/>}></Route>
         <Route path="/Products" element={<Products setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} />}></Route>
         <Route path="/SnoBalls" element={<SnoBall setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn}/>}></Route>
-        <Route path="/signup" element={<SignUp setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} user={user}/>}></Route>
+        <Route path="/signup" element={<SignUp setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} user={user}/>}
+        ></Route>
+        <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} user={user}/>}
+        ></Route>
       </Routes>
       <Footer isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
     </main>

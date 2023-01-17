@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useEffect} from 'react';
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import { Navigate } from 'react-router-dom'
 import axios from 'axios'
 import "./main.css"
@@ -37,6 +37,7 @@ export default function SignUp({setIsLoggedIn, isLoggedIn}) {
         <div className="SignUp">
             <div className="signUpForm">
             <h2 >Sign Up</h2>
+            <Link to='/login'>Log In</Link>
 
             <form onSubmit={submitHandler}>
                 <div className="input-texts">
@@ -69,7 +70,7 @@ export default function SignUp({setIsLoggedIn, isLoggedIn}) {
                         onChange={handleChange}
                         value={formState.signupCode} />
                 </div>
-                <button type='submit' class="buttons" >Sign Up</button>
+                <button type='submit' className='signInbutton' >Sign Up</button>
             </form>
             </div>
         </div>
