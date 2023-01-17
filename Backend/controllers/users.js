@@ -37,7 +37,8 @@ router.post('/signup', async (req, res) =>{
             token: token
         })
     } else {
-        res.status(401).send({message: 'Invalid Signup Code'});
+        res.status(401);
+        res.send({message: 'Invalid Signup Code'});
     }
   }})
 

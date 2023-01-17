@@ -17,7 +17,13 @@ function Footer(props) {
   
     
   return(
-            <nav>
+            <nav className="footer">
+              <div className="hours">
+                <p> HOURS OF OPERATION M-S 9AM THROUGH 5PM</p>
+                <h3>Address</h3>
+                <p> 3600 Jumonville Street, New Orleans, Louisiana 70122, United States</p>
+                <a href="tel:5046137996">Call us at (504) 613-7996</a>
+              </div>
            <div className="footerContainer">
             <Link to='/signup'>About</Link>
             { !props.isLoggedIn ?

@@ -1,8 +1,24 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import './main.css'
-import anime from 'animejs/lib/anime.es.js';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap';
+import Carousel from 'react-bootstrap/Carousel'
 
+const data = [
+    {
+       image: 'https://i.imgur.com/IGIEO39.jpeg', 
+       
+      },
+      {
+        image:'https://i.imgur.com/9gW0YR6.jpeg', 
+        
+      },
+      {
+        image:'https://i.imgur.com/ANiCRai.jpeg', 
+        
+      } 
+    ]
 
 
 
@@ -12,9 +28,25 @@ import anime from 'animejs/lib/anime.es.js';
 export default function Barbershop() {
 
     return (
-        
+        <>
         <div className="barberContainer">
-            <div className="barberText"> THIS WILL BE THE BARBERSHOP TEXT/ AREA TO ADD IMAGES AND IMAGE CAROUSEL </div>
+            <div className="barberText">
+            <Carousel fade controls={false} indicators={false}>
+             {data.map((slide, i) => {
+              return (
+                <Carousel.Item>
+              <img
+                className="d-block h-20"
+                src={slide.image}
+                alt="slider image"
+                />
+              
+            </Carousel.Item>
+              )
+            })}
+            
+          </Carousel>
+        </div>
             <div className="menu">
                 <ul>
                     <li>Any type of Fade(Tuesday-Saturday)</li><aside>$30</aside>
@@ -27,8 +59,9 @@ export default function Barbershop() {
                     
                 </ul>
             </div>
-                <p className="emailLink">Need a cut? <a  href="mailto: angel.l.ppuente@gmail.com">Hit us up </a></p>
         </div>
+                <p className="emailLink">Need a cut? <a  href="mailto: angel.l.ppuente@gmail.com">Hit us up </a></p>
+        </>
         
     )
 }

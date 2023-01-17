@@ -3,24 +3,31 @@
     text-align: center;
     font-family: 'Mandali', sans-serif;
     font-size: 48px;
-    padding: 10vw 25vw;
-    border: solid;
+    position: absolute;
+    top: 40%;
+    bottom: 30%;
     
 }
 
 .barberContainer{
-    height: 75vw;
-    border: red solid;
+    height: 80vh;
+    
     animation-name: pageLoadInFader;
     animation-duration: 1.5s;
     animation-play-state: running;
+    display: flex;
+    justify-content: column;
     
 }
 .menu{
     color: white;
-    font-size: 4vh;
-    padding-left: 55vw;
-    border: dotted pink;
+    font-size: 2.5vh;
+    padding-left: 45vw;
+    border: solid rgb(255, 255, 255);
+    margin:auto;
+    padding-right: 1.5vh;
+    padding-top: 1.5vh;
+    
     
 }
 
@@ -28,6 +35,7 @@
     list-style-image: url('https://i.imgur.com/ZSPDaYQ.png');
     list-style-position: outside;
     text-align: center;
+    
 }
 
 aside{
@@ -50,3 +58,24 @@ aside{
     
     100%{filter: opacity(100%)}
 }
+
+.barberText img{
+    height: 50vh;
+    width: auto;
+    border: solid rgb(83, 83, 83) 10px;
+    border-image: linear-gradient(45deg, goldenrod, rgb(250, 250, 250)) 1;
+    filter: opacity(1) !important;
+    border-radius: 0px;
+    
+    
+    
+}
+
+.barberText .carousel{
+    top: -140%;
+    left: 15%;
+    position: absolute;
+    filter: opacity(1) !important;
+    
+}
+

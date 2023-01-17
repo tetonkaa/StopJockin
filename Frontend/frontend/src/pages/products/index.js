@@ -7,20 +7,39 @@ import axios from 'axios'
 
 
 export default function Products() {
+    const [products, setProducts] = useState([])
 
     async function getProductInfo() {
-        const { data } = await axios.get('http://localhost:8000/product/')
-       console.log( {data})
-       
-
+        const { data } = await axios.get('http://localhost:8000/product/all')
+        return data
+        
+        
     }
-    getProductInfo()
 
+    useEffect(() => {
+    getProductInfo().then(data => setProducts(data))
+    }, [])
+    
+    
+    
+    
+    
     return (
         
-        <div className="productsContainer">
-            <p className="productsText"> THIS WILL BE THE products TEXT/ REMEMBER TO ADD IMAGES AND IMAGE CAROUSEL </p>
-            <img src="image.img"></img>
+        <div className="productsContainer" >
+            <h1>Products</h1>
+            {products.map((product, i) => {
+            return (<div  >
+                <div className="eachProduct">
+            <img className="productPhoto" src={product.image}></img>
+            <p className="productText">{product.name}</p>
+            <p className="productText">{product.description}</p>
+            <p className="productText">{product.price}</p>
+            </div>
+            </div>
+            
+            )
+        })}
         </div>
         
     )

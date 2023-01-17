@@ -11,18 +11,15 @@ import anime from 'animejs/lib/anime.es.js';
 const data = [
   {
      image: 'https://i.imgur.com/IGIEO39.jpeg', 
-     caption:"Caption",
-     description:"Description Here"
+     
     },
     {
       image:'https://i.imgur.com/9gW0YR6.jpeg', 
-      caption:"Caption",
-      description:"Description Here"
+      
     },
     {
       image:'https://i.imgur.com/ANiCRai.jpeg', 
-      caption:"Caption",
-      description:"Description Here"
+      
     } 
   ]
   

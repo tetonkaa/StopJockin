@@ -30,13 +30,24 @@ router.delete('/:id', (req, res) => {
     })
 })
 
-// index route
+
+
+
+// user Product route
 router.get('/', async (req, res) => {
     const token = req.headers.authorization
     const decode = jwt.decode(token, config.jwtSecret)
     const foundUser = await db.User.findById(decode.id)
-    const allProducts = await Product.find({ user: foundUser })
+    const allProducts = await Product.find({ user: foundUser._id })
     res.json(allProducts)
 })
+
+
+router.get('/all', async (req, res) => {
+    const allProducts = await db.Product.find({})
+    
+        res.json(allProducts)
+    })
+
 
 module.exports = router
