@@ -15,9 +15,17 @@ const data = [
         
       },
       {
-        image:'https://i.imgur.com/ANiCRai.jpeg', 
+        image:'https://i.imgur.com/WGqnzr5.jpg', 
         
-      } 
+      },
+      {
+        image:'https://i.imgur.com/CRSmoHv.jpg', 
+        
+      },
+      {
+        image:'https://i.imgur.com/hHwIO8a.jpg', 
+        
+      },    
     ]
 
 
