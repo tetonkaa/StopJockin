@@ -31,15 +31,7 @@ router.post('/signup', async (req, res) =>{
         const payload = {id: createdUser._id}
         const token = jwt.encode(payload, config.jwtSecret)
         const { signupCode } = req.body;
-        if(signupCode === 'sup3rs3cr3t'){
-        res.json({
-            user: createdUser,
-            token: token
-        })
-    } else {
-        res.status(401);
-        res.send({message: 'Invalid Signup Code'});
-    }
+
   }})
 
 router.post('/login', async (req, res) => {

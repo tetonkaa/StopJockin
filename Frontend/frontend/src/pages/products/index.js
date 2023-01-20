@@ -28,7 +28,7 @@ useEffect(() => {
 }, [products])
 
 
-    // const productList = {products}.products.docs
+
 
     
     

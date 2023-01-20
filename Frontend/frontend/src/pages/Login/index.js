@@ -19,7 +19,7 @@ export default function Login ({setIsLoggedIn , isLoggedIn}) {
 
     async function submitHandler(event) {
         event.preventDefault()
-        const { data } = await axios.post('http://localhost:8000/user/login', formState)
+        const { data } = await axios.post('http://localhost:5000/user/login', formState)
         localStorage.token = data.token
         setIsLoggedIn(true)
     }
@@ -27,7 +27,7 @@ export default function Login ({setIsLoggedIn , isLoggedIn}) {
 
     useEffect(() => {
         if (isLoggedIn) {
-            navigate('/account')
+            navigate('/comments')
         }
     }, [isLoggedIn])
     

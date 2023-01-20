@@ -20,7 +20,7 @@ export default function SignUp({setIsLoggedIn, isLoggedIn}) {
 
     async function submitHandler(event) {
         event.preventDefault()
-        const { data } = await axios.post('http://localhost:8000/user/signup', formState)
+        const { data } = await axios.post('http://localhost:5000/user/signup', formState)
         localStorage.token = data.token
         setIsLoggedIn(true)
     }
@@ -29,7 +29,7 @@ export default function SignUp({setIsLoggedIn, isLoggedIn}) {
     
     useEffect(() => {
         if (isLoggedIn) {
-            navigate('/account')
+            navigate('/')
         }
     }, [isLoggedIn])
 
@@ -59,16 +59,6 @@ export default function SignUp({setIsLoggedIn, isLoggedIn}) {
                         name='password'
                         onChange={handleChange}
                         value={formState.password} />
-                </div>
-
-                <div className="input-texts">
-                    <label htmlFor='signupCode'>Sign up Key</label>
-                    <br />
-                    <input
-                        type='text'
-                        name='signupCode'
-                        onChange={handleChange}
-                        value={formState.signupCode} />
                 </div>
                 <button type='submit' className='signInbutton' >Sign Up</button>
             </form>
