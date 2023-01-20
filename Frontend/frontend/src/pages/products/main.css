@@ -21,6 +21,8 @@
     
 }
 
+
+
 .productPhoto{
     height: 200px;
     margin: auto;
@@ -44,4 +46,10 @@
     flex-direction: row;
     border: dotted rgb(0, 204, 255);
     width: 20vh;
+}
+
+.loader{
+    text-align:center;
+    color:goldenrod;
+
 }

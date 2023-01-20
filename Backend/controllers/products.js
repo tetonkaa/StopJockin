@@ -13,14 +13,17 @@ function isAuthenticated(req, res, next) {
     }
 }
 
-router.post('/', isAuthenticated, async (req, res) => {
-    const createdProduct = await Product.create(req.body)
-    const token = req.headers.authorization
-    const decoded = jwt.decode(token, config.jwtSecret)
-    createdProduct.user = decoded.id
-    createdProduct.save()
-    res.json(createdProduct)
-})
+// router.post('/', isAuthenticated, async (req, res) => {
+//     const createdProduct = await Product.create(req.body)
+//     const token = req.headers.authorization
+//     const decoded = jwt.decode(token, config.jwtSecret)
+//     createdProduct.user = decoded.id
+//     createdProduct.save()
+//     res.json(createdProduct)
+// })
+
+router.post('/'),
+
 
 //delete route
 router.delete('/:id', (req, res) => {

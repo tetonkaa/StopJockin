@@ -27,7 +27,7 @@ export default function Login ({setIsLoggedIn , isLoggedIn}) {
 
     useEffect(() => {
         if (isLoggedIn) {
-            navigate('/')
+            navigate('/account')
         }
     }, [isLoggedIn])
     

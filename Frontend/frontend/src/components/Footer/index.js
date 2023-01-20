@@ -28,7 +28,7 @@ function Footer(props) {
             <Link to='/signup'>About</Link>
             { !props.isLoggedIn ?
             <>
-           <Link to='/signup'>Employee Portal</Link>
+           <a href="http://localhost:5000/admin">Employee Portal</a>
            </>
            :
            <p className="LogoutText" onClick={() => logout()}>Log out</p>

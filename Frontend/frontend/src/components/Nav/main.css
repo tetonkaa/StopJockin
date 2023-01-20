@@ -68,3 +68,8 @@ a:link, a:visited {
     100%{filter: grayscale(0%)}
 }
 
+.logoText{
+    animation: bounce; 
+  animation-duration: 2s;
+  animation-delay: 10s;
+}

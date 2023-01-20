@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema
+require("dotenv").config()
 
 const userSchema = new mongoose.Schema(
 	{
@@ -10,7 +11,7 @@ const userSchema = new mongoose.Schema(
         required: true,
         validate: {
           validator: function(value) {
-            return value === 'sup3rs3cr3t'
+            return value === `${process.env.USERKEY}`
           },
           message: 'Invalid Signup Code'
         }

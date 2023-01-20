@@ -4,7 +4,8 @@ import './main.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap';
 import Carousel from 'react-bootstrap/Carousel'
-import anime from 'animejs/lib/anime.es.js';
+import 'animate.css';
+
 
 
 
@@ -49,7 +50,7 @@ const data = [
           </Carousel>
                 <div>       
             <p className="homeText"> 
-            <h1 className="largeLogo">Stop Jockin</h1> 
+            <h1 className="largeLogo animate__animated animate__bounce animate__delay-2s">Stop Jockin</h1> 
             Fine Cuts,<br/>
             Classic New Orleans style snoBalls, <br/> and other Stop Jockin products and services </p>
             </div>
