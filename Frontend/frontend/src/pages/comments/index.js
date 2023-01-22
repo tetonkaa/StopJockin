@@ -11,7 +11,7 @@ export default function Comments({isLoggedIn, setIsLoggedIn}) {
     // state declarations
     const [comments, setComments] = useState([])
     const [fetch, setFetch] = useState(false)
-    const [username, setUsername] = useState({})
+    const [username, setUsername] = useState()
     const [formShow, setFormShow] = useState(false)
     const [user, setUser] = useState({})
 
@@ -34,7 +34,7 @@ export default function Comments({isLoggedIn, setIsLoggedIn}) {
         const handleSubmit = async (event) => {
             event.preventDefault();
             await updateUsername(user);
-            await navigate("/");
+            
         };
 
         async function deleteUser() {
@@ -71,7 +71,9 @@ export default function Comments({isLoggedIn, setIsLoggedIn}) {
             }
     }
         const { data } = await axios.get('http://localhost:5000/user', config)
+        setUsername(data.username)
         return data
+        
     }   
     // Set Comments
     
@@ -86,11 +88,16 @@ export default function Comments({isLoggedIn, setIsLoggedIn}) {
     }
     useEffect(() => {
         getCommentInfo().then(data => setComments(data))
-        getUserName().then(data => setUsername(data.username))
-    }, [])
+        
+    }, [comments])
 
+    useEffect(() => {
+        getUserName().then(data => setUsername(data.username))
+    }, [username])
+    
     const [showName, setShowName] = useState(user.username)
-    console.log(showName)
+
+    console.log(username)
     
     // update the input value as a user types
     const handleChange = (event) => {
@@ -101,7 +108,7 @@ export default function Comments({isLoggedIn, setIsLoggedIn}) {
     async function submitHandler(event) {
         event.preventDefault()
         createComment().then(setFetch(true))
-       
+        
         
     }
     
@@ -131,7 +138,7 @@ export default function Comments({isLoggedIn, setIsLoggedIn}) {
         <button onClick={() => {setFormShow(true)}}>Edit</button>
 
         <div className="commentsPage">
-            <h1>Hello {showName}</h1>
+            <h1>Hello {username}</h1>
             <button className="someRedBtn" onClick={()=> deleteUser()}> Delete Account</button>
             <br/>
             <br/>

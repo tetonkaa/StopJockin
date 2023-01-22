@@ -34,7 +34,6 @@
     list-style-image: url('https://i.imgur.com/ZSPDaYQ.png');
     list-style-position: outside;
     text-align: center;
-    
 }
 
 aside{
@@ -65,7 +64,7 @@ aside{
     border-image: linear-gradient(45deg, goldenrod, rgb(250, 250, 250)) 1;
     filter: opacity(1) !important;
     border-radius: 0px;
-    margin-left: 2vw;
+    margin-left: 25vw;
     
     
     

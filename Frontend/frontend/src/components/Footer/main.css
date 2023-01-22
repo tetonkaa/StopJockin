@@ -35,3 +35,17 @@
     fill: goldenrod;
     height: 4vh;
 }
+
+.facebook{
+    height: 4vh;
+    margin-left: 2vh;
+}
+
+.instaSvg:hover{
+
+    background-color: rgb(255, 255, 255);
+}
+
+.facebook:hover{
+    background-color: white;
+}
