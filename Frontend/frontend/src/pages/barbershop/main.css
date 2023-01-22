@@ -2,10 +2,8 @@
     color:goldenrod;
     text-align: center;
     font-family: 'Mandali', sans-serif;
-    font-size: 48px;
     position: absolute;
-    top: 40%;
-    bottom: 30%;
+    
     
 }
 
@@ -16,7 +14,7 @@
     animation-duration: 1.5s;
     animation-play-state: running;
     display: flex;
-    justify-content: column;
+    
     
 }
 .menu{
@@ -24,6 +22,7 @@
     font-size: 2.5vh;
     padding-left: 45vw;
     border: solid rgb(255, 255, 255);
+    border-image: linear-gradient(45deg, goldenrod, rgb(250, 250, 250)) 1;
     margin:auto;
     padding-right: 1.5vh;
     padding-top: 1.5vh;
@@ -73,10 +72,12 @@ aside{
 }
 
 .barberText .carousel{
-    top: -140%;
-    left: 15%;
-    position: absolute;
+    bottom: 15vh;
     filter: opacity(1) !important;
-    
+    position: relative;
+}
+
+.barberText .carousel img{
+    height: 50vh;
 }
 

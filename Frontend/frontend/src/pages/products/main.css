@@ -11,45 +11,49 @@
 
 .productsContainer{
     height: 120vh;
-    width:100%;
     animation-name: pageLoadInFader;
     animation-duration: 1.5s;
     animation-play-state: running;
-    border: red dotted;
+    border: solid 1vh;
+    border-image: linear-gradient(45deg, goldenrod, rgb(194, 194, 194)) 4;
     margin-top: 10vh;
-    
     
 }
 
 
 
 .productPhoto{
-    height: 200px;
+    height: 24vh;
+    position: relative;
+    display: block;
     margin: auto;
-    border: dotted pink;
-    
+    margin-bottom: 2vh;
 }
 
 .productText{
     color:goldenrod;
-    text-align: left;
+    text-align: center;
     font-family: 'Mandali', sans-serif;
     font-size: 4vh;
-    
     border: solid;
     margin-left: 2vw;
     margin-right: 2vw;
+    width: 30vh;
+    margin: auto;
 }
 
 .eachProduct{
-    display:flex;
-    flex-direction: row;
-    border: dotted rgb(0, 204, 255);
-    width: 20vh;
+    padding: 5vh;
+    
 }
 
 .loader{
     text-align:center;
     color:goldenrod;
 
+}
+
+.productsTitle{
+    text-align: center;
+    color: goldenrod;
 }

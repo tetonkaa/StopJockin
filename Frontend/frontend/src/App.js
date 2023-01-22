@@ -46,15 +46,15 @@ function App() {
 
       <Nav />
       <Routes>
-        <Route path="/" element={<Home/>}></Route>
-        <Route path="/barbershop" element={<Barbershop/>}></Route>
-        <Route path="/Lot-7" element={<Lot7/>}></Route>
-        <Route path="/Products" element={<Products/>}></Route>
-        <Route path="/SnoBalls" element={<SnoBall/>}></Route>      
-        <Route path="/signup" element={<SignUp />}></Route>
-        <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} />}></Route>
-        <Route path="/comments" element={<Comments setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} />}></Route>
-      
+        <Route path="/" element={<Home/>}/>
+        <Route path="/barbershop" element={<Barbershop/>}/>
+        <Route path="/Lot-7" element={<Lot7/>}/>
+        <Route path="/Products" element={<Products/>}/>
+        <Route path="/SnoBalls" element={<SnoBall/>}/>      
+        <Route path="/signup" element={<SignUp setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn}/>}/>
+        <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} />}/>
+        <Route path="/comments" element={<Comments setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} />}/>
+        {/* <Route path="/:anything" element={<ErrorScreen />}/> */}
       </Routes>
       <Footer setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} />
     </main>

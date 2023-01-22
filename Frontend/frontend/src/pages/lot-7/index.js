@@ -11,7 +11,9 @@ export default function Lot7() {
     return (
         
         <div className="lot7Container">
-            <p className="lot7Text"> THIS WILL BE THE lot7 TEXT/ REMEMBER TO ADD IMAGES AND IMAGE CAROUSEL </p>
+            <p className="lot7Text">
+                PAGE UNDER CONSTRUCTION
+            <img className="construction"src="https://i.imgur.com/rG4LHzO.gif"/></p>
         </div>
         
     )

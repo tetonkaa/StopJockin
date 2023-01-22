@@ -22,6 +22,10 @@ const Posts = {
       type: 'text',
     },
     {
+      name: 'price',
+      type: 'text',
+    },
+    {
       name: 'category',
       type: 'relationship',
       relationTo: 'categories'

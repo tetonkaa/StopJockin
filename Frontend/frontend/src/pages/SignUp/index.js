@@ -29,7 +29,7 @@ export default function SignUp({setIsLoggedIn, isLoggedIn}) {
     
     useEffect(() => {
         if (isLoggedIn) {
-            navigate('/')
+            navigate('/comments')
         }
     }, [isLoggedIn])
 

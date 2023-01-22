@@ -8,6 +8,14 @@ const config = require('../config/config')
 const User = require('../models/user')
 
 
+function isAuthenticated(req, res, next){
+  if(req.headers.authorization){
+      next()
+  } else {
+      console.log(req.headers)
+      res.sendStatus(401)
+  }
+}
 
 
 //routes
@@ -54,6 +62,16 @@ router.post('/signup', async (req, res) => {
     const token = req.headers.authorization
     const decode = jwt.decode(token, config.jwtSecret)
     const foundUser = await db.User.findById(decode.id)
+    res.json(foundUser)
+  })
+
+
+  router.put('/:id', isAuthenticated, async (req, res) => {
+    const token = req.headers.authorization
+    const decode = jwt.decode(token, config.jwtSecret)
+    const foundUser = await db.User.findByIdAndUpdate(decode.id,req.body,{
+        new : true })
+    
     res.json(foundUser)
   })
   

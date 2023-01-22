@@ -28,5 +28,10 @@
 .footer{
     display: flex;
     flex-direction: column;
-    margin-top: 20vh;
+    margin-top: 22vh;
+}
+
+.instaSvg path{
+    fill: goldenrod;
+    height: 4vh;
 }
