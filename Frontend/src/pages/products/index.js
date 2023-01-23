@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import './main.css'
 import axios from 'axios'
 import 'animate.css';
-import LoadingSvg from '../products/pulse-multiple.svg'
+import LoadingSvg from './pulse-multiple.svg'
 
 
 export default function Products() {
