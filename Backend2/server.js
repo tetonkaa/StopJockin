@@ -5,7 +5,7 @@ require('dotenv').config();
 const app = express();
 const cors = require("cors")
 const passport = require('./config/passport')()
-
+const path = require("path")
 
 //middleware
 app.use('/api', router)
@@ -13,6 +13,7 @@ app.use(cors())
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 app.use(passport.initialize())
+app.use(express.static(path.join(path.dirname(__dirname), "frontend", "build")))
 
 
 // Redirect root to Admin panel
@@ -44,6 +45,9 @@ router.get('/Posts-Posts', (req, res) => {
   res.json(Posts);
 });
 
+app.get("*", (req, res) => {
+  res.sendFile(path.join(path.dirname(__dirname), "frontend", "build", "index.html"));
+});
 
 app.listen(5000);
 

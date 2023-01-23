@@ -11,7 +11,7 @@ export default function Products() {
     const [productList, setProductList] = useState()
     
     async function getProductInfo() {
-        const { data } = await axios.get('http://localhost:5000/api/Posts')
+        const { data } = await axios.get('api/Posts')
         return data
         
         

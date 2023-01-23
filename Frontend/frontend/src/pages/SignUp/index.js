@@ -20,7 +20,7 @@ export default function SignUp({setIsLoggedIn, isLoggedIn}) {
 
     async function submitHandler(event) {
         event.preventDefault()
-        const { data } = await axios.post('http://localhost:5000/user/signup', formState)
+        const { data } = await axios.post('user/signup', formState)
         localStorage.token = data.token
         setIsLoggedIn(true)
     }

@@ -43,7 +43,7 @@ export default function Comments({isLoggedIn, setIsLoggedIn}) {
                     'Authorization': localStorage.getItem('token')
                 }
             };
-            await axios.delete('http://localhost:5000/user', config)
+            await axios.delete('user', config)
             
           
           localStorage.clear()
@@ -59,7 +59,7 @@ export default function Comments({isLoggedIn, setIsLoggedIn}) {
             }
         }
             const {_id} = formState;
-            const updatedData = await axios.put(`http://localhost:5000/user/${_id}`, formState, config)
+            const updatedData = await axios.put(`user/${_id}`, formState, config)
             return updatedData.data
         };
 
@@ -70,7 +70,7 @@ export default function Comments({isLoggedIn, setIsLoggedIn}) {
                 
             }
     }
-        const { data } = await axios.get('http://localhost:5000/user', config)
+        const { data } = await axios.get('user', config)
         setUsername(data.username)
         return data
         
@@ -78,12 +78,12 @@ export default function Comments({isLoggedIn, setIsLoggedIn}) {
     // Set Comments
     
     async function getCommentInfo() {
-        const { data } = await axios.get('http://localhost:5000/comment')
+        const { data } = await axios.get('comment')
         return data   
     }
     async function createComment() {
 
-        const { data } = await axios.post('http://localhost:5000/comment', formState)
+        const { data } = await axios.post('comment', formState)
         return data
     }
     useEffect(() => {
