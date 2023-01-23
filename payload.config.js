@@ -1,8 +1,8 @@
 import { buildConfig } from 'payload/config';
-import Categories from './collections/Categories';
-import Posts from './collections/Posts';
-import Tags from './collections/Tags';
-import Users from './collections/Users';
+import Categories from './Backend2/collections/Categories';
+import Posts from './Backend2/collections/Posts';
+import Tags from './Backend2/collections/Tags';
+import Users from './Backend2/collections/Users';
 
 export default buildConfig({
   serverURL: 'http://localhost:5000',
