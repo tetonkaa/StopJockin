@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cd Frontend/ && npm run build && cd ../Backend/ && node server.js",
     "frontend": "cd Frontend/ && react-scripts start",
-    "backend": "cd Backend/ && npm start"
+    "backend": "cd Backend/ && node server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
