@@ -1,32 +1,53 @@
-//dependencies
-const mongoose = require("mongoose");
-const express = require('express')
-const app = express()
+const express = require('express');
+const payload = require('payload');
+const router = express.Router();
+require('dotenv').config();
+const app = express();
 const cors = require("cors")
-require("dotenv").config()
 const passport = require('./config/passport')()
 const path = require("path")
 
-//models
-const db = require('./models')
-
-//controllers
-const userCtrl = require('./controllers/users')
-const productsCtrl = require('./controllers/products')
-
 //middleware
-
+app.use('/api', router)
 app.use(cors())
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 app.use(passport.initialize())
+app.use(express.static(path.join(path.dirname(__dirname), "frontend", "build")))
+
+
+// Redirect root to Admin panel
+app.get('/', (_, res) => {
+  res.redirect('/admin');
+});
+
+// Initialize Payload
+payload.init({
+  secret: process.env.PAYLOAD_SECRET,
+  mongoURL: process.env.MONGODB_URI,
+  express: app,
+  onInit: () => {
+    payload.logger.info(`Payload Admin URL: ${payload.getAdminURL()}`);
+  },
+});
+
+//controllers
+const userCtrl = require('./controllers/users')
+const commentsCtrl = require('./controllers/comments')
 
 //use controllers
 app.use('/user', userCtrl);
-app.use('/product', productsCtrl);
+app.use('/comment', commentsCtrl);
 
+// Add your own express routes here
 
-//listener
-app.listen(process.env.PORT, () => {
-    console.log(`App is running at localhost:${process.env.PORT}`)
-})
+router.get('/Posts-Posts', (req, res) => {
+  res.json(Posts);
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(path.dirname(__dirname), "frontend", "build", "index.html"));
+});
+
+app.listen(5000);
+

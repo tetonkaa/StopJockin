@@ -1,0 +1,51 @@
+{
+  "name": "backend-test2",
+  "description": "Payload project created from js-blog template",
+  "version": "1.0.0",
+  "main": "dist/server.js",
+  "license": "MIT",
+
+  "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "cd Frontend/ && npm run build && cd ../Backend/ && node server.js",
+      "frontend": "cd Frontend/ && react-scripts start",
+      "backend": "cd Backend/ && nodemon server.js",
+      "build": "payload build"
+    },
+  
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "animate.css": "^4.1.1",
+    "animejs": "^3.2.1",
+    "axios": "^1.2.2",
+    "bootstrap": "^5.2.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jwt-passport": "^0.0.5",
+    "jwt-simple": "^0.5.6",
+    "mongoose": "^6.8.4",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1",
+    "payload": "^1.5.9",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.6.2",
+    "react-scripts": "5.0.1",
+    "serve": "^14.1.2",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.9",
+    "copyfiles": "^2.4.1",
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.6",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.8.4"
+  },
+  "keywords": [],
+  "author": ""
+}

@@ -1,7 +1,7 @@
 // dependencies
 const mongoose = require("mongoose")
 require("dotenv").config()
-const connectionString = process.env.MONGODBURI
+const connectionString = process.env.USER_DB
 mongoose.set('strictQuery', false)
 // connetc to MongoDB via mongoose
 mongoose.connect(
@@ -24,4 +24,3 @@ mongoose.connection.on('error', (error) => {
 
 //access models
 module.exports.User = require('./user')
-module.exports.Product = require('./product')
