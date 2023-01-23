@@ -2,6 +2,9 @@
   "name": "backend-test2",
   "description": "Payload project created from js-blog template",
   "version": "1.0.0",
+  "engines": {
+    "node": "18.12.1"
+  },
   "main": "dist/server.js",
   "license": "MIT",
   "scripts": {
