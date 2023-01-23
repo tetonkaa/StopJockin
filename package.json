@@ -7,14 +7,15 @@
   },
   "main": "dist/server.js",
   "license": "MIT",
+
   "scripts": {
-    "dev": "react-scripts start",
-    "start": "serve -s build",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
-  },
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "cd frontend/ && npm run build && cd ../backend/ && node server.js",
+      "frontend": "cd frontend/ && react-scripts start",
+      "backend": "cd backend/ && nodemon server.js",
+      "build": "payload build"
+    },
+  
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
