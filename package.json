@@ -7,9 +7,9 @@
   "scripts": {
     "build": "payload build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd frontend/ && npm run build && cd ../backend/ && node server.js",
-    "frontend": "cd frontend/ && react-scripts start",
-    "backend": "cd backend/ && nodemon server.js"
+    "start": "cd Frontend/ && npm run build && cd ../Backend/ && node server.js",
+    "frontend": "cd Frontend/ && react-scripts start",
+    "backend": "cd Backend/ && nodemon server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
