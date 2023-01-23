@@ -27,7 +27,7 @@ function App() {
         'Authorization': localStorage.getItem('token')
       }
     };
-    const userData = await axios.get("user", config)
+    const userData = await axios.get("/user", config)
     setUser(userData.data)
   }
 
